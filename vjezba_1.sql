@@ -80,6 +80,22 @@ insert into sestra(haljina,hlace,narukvica) values ('Plava','Smeđe',1),('Zelena
 insert into zena(kratkamajica,bojaociju,sestra,jmbag) values ('Plava','Plava',1,12345678910),('Crvena','Zelena',2,12345678911),('Roza','Smeđa',3,12345678912);
 insert into muskarac(bojaociju,maraka,zena) values ('Plava',43.12345,1),('Zelena',32.23456,2),('Smeđa',65.34567,3);
 insert into sestra_svekar(sestra,svekar) values (1,2),(2,3),(3,1);
+insert into punac(hlace) values ('Svečane'),('ZaPoKući'),('Radne');
+insert into cura(novcica,gustoca,ogrlica,punac) values (320.32,34.332211,3,1),(230.32,45.002233,4,2),(420.23,52.222211,5,3);
+insert into mladic(suknja,kuna,ekstrovertno,dukserica) values ('Crvena',53.87,1,'Roza'),('Plava',342.57,0,'Plava'),('Roza',13.334,1,'Ljubičasta');
+
+select * from cura;
+
+update cura set gustoca=15.77;
+
+select * from mladic;
+
+delete from mladic where kuna>15.78;
+
+
+
+
+
 
 
 
