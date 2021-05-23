@@ -87,3 +87,5 @@ select * from svekar;
 delete from punica where kratkamajica='AB';
 
 select * from punica;
+
+
