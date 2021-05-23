@@ -66,3 +66,20 @@ alter table neprijatelj add foreign key(becar) references becar(sifra);
 alter table becar add foreign key(muskarac) references muskarac(sifra);
 alter table muskarac_decko add foreign key(muskarac) references muskarac(sifra);
 alter table muskarac_decko add foreign key(decko) references decko(sifra);
+
+insert into muskarac(drugiputa) values ('2021-10-12'),('2021-12-31'),('2021-08-08');
+insert into decko(treciputa,ogrlica,ekstrovertno) values ('2021-04-21',21,1),('2021-05-06',33,0),('2021-07-07',76,1);
+insert into muskarac_decko(muskarac,decko) values (1,3),(2,1),(3,2);
+insert into becar(eura,muskarac) values (355.33,1),(221.33,2),(5463.35,3);
+insert into neprijatelj(ogrlica,becar) values (32,1),(54,2),(75,3);
+insert into cura(nausnica,ogrlica) values (21,45),(67,32),(76,23);
+insert into brat(novcica) values (12.75),(32.45),(56.32);
+
+update cura set indiferentno=false;
+
+select * from cura;
+
+delete from brat where novcica!=12.75;
+
+select * from brat;
+
