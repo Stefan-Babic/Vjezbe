@@ -70,5 +70,21 @@ alter table ostavljen add foreign key(zarucnik) references zarucnik(sifra);
 alter table prijateljica add foreign key(ostavljen) references ostavljen(sifra);
 alter table sestra add foreign key(prijateljica) references prijateljica(sifra);
 
+insert into mladic(lipa,narukvica,drugiputa) values (23.44,32,'2021-10-21'),(34.56,12,'2021-11-10'),(54.76,76,'2021-02-21');
+insert into zarucnik(asocijalno,narukvica,novcica) values (1,24,234.44),(0,46,2123.33),(0,78,12311.22);
+insert into zarucnik_mladic(zarucnik,mladic) values (1,3),(2,2),(3,1);
+insert into ostavljen(introvertno,kratkamajica,prstena,zarucnik) values (1,'Plava',32,1),(0,'Zelena',55,2),(0,'Crvena',67,3);
+insert into prijateljica(gustoca,ogrlica,ostavljen) values (32.32,33,1),(56.66,32,2),(76.76,12,3);
+insert into cura(lipa,introvertno,narukvica) values (32.33,0,32),(88.44,1,88),(75.98,0,37);
+insert into punica(eura,cura) values (322.33,1),(3324.33,2),(6745.324,3);
+insert into sestra(bojakose,hlace,stilfrizura,maraka) values ('Plava','Traper','Jež',32.333),('Smeđa','Za Pokući','Irokeza',3245.33),
+('Crna','Svečane','Fudbalerka',324.11);
+
+update punica set eura=15.77;
+select * from punica;
+
+delete from sestra where hlace<'AB';
+select * from sestra;
+
  	
  
