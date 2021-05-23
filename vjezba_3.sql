@@ -69,3 +69,21 @@ alter table snasa add foreign key(ostavljena) references ostavljena(sifra);
 alter table ostavljena add foreign key(prijatelj) references prijatelj(sifra);
 alter table prijatelj_brat add foreign key(prijatelj) references prijatelj(sifra);
 alter table prijatelj_brat add foreign key(brat) references brat(sifra);
+
+
+insert into brat(ogrlica,ekstrovertno) values (12,1),(7,0),(56,1);
+insert into prijatelj(indiferentno) values (0),(1),(0);
+insert into ostavljena(majica,modelnaocala,prijatelj) values ('Kratka','Diesel',1),('Dugačka','Police',2),('Taman','Ray Ban',3);
+insert into prijatelj_brat(prijatelj,brat) values (1,3),(2,2),(3,1);
+insert into snasa(kuna,eura,ostavljena) values (321.54,53.22,1),(5434.54,32.32,2),(456.32,34.67,3);
+insert into cura(majica,ogrlica) values ('Zelena',32),('Crvena',12),('Roza',43);
+insert into svekar(novcica,suknja,narukvica,cura) values (432.21,'Zelena',32,1),(8756.44,'Plava',43,2),(32.21,'Crvena',13,3);
+insert into punica(kratkamajica,kuna,vesta,snasa) values ('AB',32.33,'Vunena',1),('Dobra',4354.32,'Pamučna',2),('Viteški Oklop',4342.65,'Kožna',3);
+
+update svekar set suknja='Osijek';
+
+select * from svekar;
+
+delete from punica where kratkamajica='AB';
+
+select * from punica;
