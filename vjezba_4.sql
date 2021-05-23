@@ -66,6 +66,24 @@ alter table snasa add foreign key(zena) references zena(sifra);
 alter table zena_mladic add foreign key(zena) references zena(sifra);
 alter table zena_mladic add foreign key(mladic) references mladic(sifra);
 
+insert into zena(suknja,prstena) values ('Kratka',32),('Prekratka',12),('Taman',21);
+insert into mladic(nausnica,vesta) values (35,'Plava'),(53,'Roza'),(24,'Skupa');
+insert into zena_mladic(zena,mladic) values (1,2),(2,3),(3,1);
+insert into snasa(treciputa,haljina,zena) values (null,'Crvena',1),('2020-04-04','Bijela',2),(null,'Crna',3);
+insert into becar(kratkamajica,bojaociju,snasa) values ('Žuta','Smeđa',1),('Siva','Plava',2),('Crna','Zelena',3);
+insert into ostavljen(introvertno) values (1),(0),(0);
+insert into punac(majica,jmbag,novcica,maraka,ostavljen) values ('Kratka',12345678910,543.55,32.21,1),
+('Dugačka',12345678911,213.221,23.31,2),('Bez rukava',12345678912,876.56,12.22,3);
+insert into prijatelj(prstena,jmbag,suknja,becar) values (13,12345678913,'Plava',1),(22,12345678914,'Zelena',2),(76,12345678915,'Roza',3);
+
+update punac set majica='Osijek';
+select * from punac;
+
+delete from prijatelj where prstena>17;
+select * from prijatelj;
+
+
+ 
 
 
 
