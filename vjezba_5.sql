@@ -67,3 +67,22 @@ alter table punica add foreign key(punac) references punac(sifra);
 alter table punac add foreign key(svekar) references svekar(sifra);
 alter table svekar_cura add foreign key(svekar) references svekar(sifra);
 alter table svekar_cura add foreign key(cura) references cura(sifra);
+
+
+insert into svekar(majica,carape,eura) values ('Urban','Probušene',350.33),('Sport','Treći dan',32.33),('Plava','Najlonke',222.22);
+insert into cura(carape,maraka,asocijalno,vesta) values ('Probušene',32.10010,0,'Pamučna'),('Čitave',456.444,0,'Prozirna'),('Neoprane',3322.444,1,'Na bretele');
+insert into svekar_cura(svekar,cura) values (1,3),(2,2),(3,1);
+insert into punac(dukserica,prviputa,majica,svekar) values ('Nike','2020-03-05','Nike',1),('Adidas','2020-12-12','Adidas',2),
+('Converse','2021-02-04','Converse',3);
+insert into punica(hlace,nausnica,vesta,modelnaocala,treciputa,punac) values ('Dugačke',32,'Siva','Police','2021-11-21',1),
+('Kratke',12,'Bijela','Diesel','2021-10-10',2),('Svečane',56,'Crna','Ray Ban','2022-04-03',3);
+insert into mladic(kratkamajica,haljina) values ('Bijela','Crna'),('Siva','Crvena'),('Crna','Roza');
+insert into ostavljena(ogrlica,punica) values (17,1),(24,2),(11,3);
+
+update mladic set haljina='Osijek';
+
+select * from mladic;
+
+delete from ostavljena where ogrlica=17;
+
+select * from ostavljena;
