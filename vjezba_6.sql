@@ -69,5 +69,26 @@ alter table brat add foreign key(prijatelj) references prijatelj(sifra);
 alter table prijatelj_ostavljena add foreign key(prijatelj) references prijatelj(sifra);
 alter table prijatelj_ostavljena add foreign key(ostavljena) references ostavljena(sifra);
 
+insert into prijatelj(prstena,stilfrizura) values (32,'Jež'),(67,'Fudbalerka'),(12,'Šabanka');
+insert into ostavljena(prviputa,kratkamajica) values ('2021-04-12','Plava'),('2021-10-21','Žuta'),('2021-06-21','Zelena');
+insert into prijatelj_ostavljena(prijatelj,ostavljena) values (1,2),(2,3),(3,1);
+insert into brat(nausnica,treciputa,narukvica,prijatelj) values (12,'2022-02-21',21,1),(43,'2022-04-12',45,2),(87,'2021-10-21',54,3);
+insert into zena(novcica,narukvica,dukserica,brat) values (324.32,32,'Converse',1),(43534.453,54,'Nike',2),(3422.33,64,'Adidas',3);
+insert into punac(ekstrovertno,suknja,majica,prviputa) values (1,'Plava','Zelena','2021-11-11'),(0,'Crvena','Roza','2021-06-12'),(1,'Ljubičasta','Žuta','2021-07-07');
+insert into svekrva(hlace,suknja,ogrlica,treciputa,dukserica,narukvica,punac) values ('Dugačke','Prekratka',32,'2021-10-23','Adidas',34,1),('Kratke','Dugačka',12,'2021-11-21','Nike',88,2),
+('Traper','Taman',33,'2022-03-03','Converse',65,3);
+insert into decko(modelnaocala,nausnica,zena) values ('Ray Ban',32,1),('Police',56,2),('Diesel',21,3);
+select * from svekrva;
+
+update svekrva set suknja='Osijek';
+
+select * from decko;
+
+delete from decko where modelnaocala<'AB';
+
+
+
+
+
 
 
