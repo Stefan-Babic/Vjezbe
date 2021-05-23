@@ -69,5 +69,24 @@ alter table decko_zarucnica add foreign key(decko) references decko(sifra);
 alter table decko_zarucnica add foreign key(zarucnica) references zarucnica(sifra);
 alter table prijatelj add foreign key(svekar) references svekar(sifra);
 
+insert into decko(indiferentno,vesta,asocijalno) values (0,'Plava',1),(1,'Zelena',0),(1,'Plava',1);
+insert into zarucnica(narukvica,bojakose,novcica,lipa,indiferentno) values (1,'Plava',435.334,32.456,0),(2,'Crna',354.675,67.754,1),(3,'Smeđa',322.656,63.3423,0);
+insert into cura(haljina,drugiputa,majica,decko) values ('Plava','2021-07-15 16:45:00','Zelena',1),('Roza','2021-09-24 20:00:00','Ljubičasta',2),('Karirana','2022-01-03 21:00:00','Crvena',3);
+insert into neprijatelj(haljina,modelnaocala,kuna,cura) values ('Plava','Diesel',453.546,1),('Crvena','Ray Ban',2340.54,3),('Zelena','Police',32.145,2);
+insert into decko_zarucnica(decko,zarucnica) values (1,2),(2,3),(3,1);
+insert into svekar(ogrlica,asocijalno) values (1,0),(2,1),(3,0);
+insert into prijatelj(treciputa,ekstrovertno,svekar) values ('2021-05-14',0,1),('2021-07.05',0,2),('2021-08-07',1,3);
+insert into brat(suknja,ogrlica,asocijalno,neprijatelj) values ('Kratka',54,0,1),('Dugačka',11,1,2),('Taman',14,1,3);
+
+
+update prijatelj set treciputa='2020-04-30';
+select * from prijatelj;
+
+delete from brat where ogrlica!=14;
+select * from brat;
+
+
+
+
 
 
