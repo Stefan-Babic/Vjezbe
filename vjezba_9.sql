@@ -70,6 +70,19 @@ alter table cura add foreign key(punac) references punac(sifra);
 alter table brat add foreign key(cura) references cura(sifra);
 alter table zarucnik add foreign key(brat) references brat(sifra);
 
+insert into punac(narukvica) values (32),(12),(54);
+insert into prijateljica(kuna) values (322.22),(3567.21),(564.33);
+insert into punac_prijateljica(punac,prijateljica) values (1,1),(2,2),(3,3);
+insert into cura(vesta,suknja,punac) values ('Bijela','Kratka',1),('Crna','Dugačka',2),('Siva','Taman',3);
+insert into brat(novcica,vesta) values (324.21,'Pamučna'),(32425.32,'Vunena'),(234.25,'Poderana');
+insert into snasa(drugiputa,haljina) values ('2021-10-21','Crvena'),('2021-11-26','Plava'),('2021-04-21','Zelena');
+insert into zarucnik(kratkamajica,nausnica,brat) values ('Plava',32,1),('Zelena',23,2),('Žuta',67,3);
+
+update snasa set drugiputa='2020-04-24';
+select * from snasa;
+
+delete from zarucnik where haljina='AB';
+select * from zarucnik;
 
 
 
