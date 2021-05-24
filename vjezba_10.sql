@@ -70,3 +70,20 @@ alter table mladic add foreign key(svekrva) references svekrva(sifra);
 alter table svekrva add foreign key(punac) references punac(sifra);
 alter table punac_neprijatelj add foreign key(punac) references punac(sifra);
 alter table punac_neprijatelj add foreign key(neprijatelj) references neprijatelj(sifra);
+
+insert into punac(eura) values (324.33),(2556.32),(456.576);
+insert into neprijatelj(gustoca,dukserica,stilfrizura) values (32.22,'Converse','Šabanka'),(45.22,'Nike','Irokeza'),(67.56,'Adidas','Fudbalerka');
+insert into punac_neprijatelj(punac,neprijatelj) values (1,1),(2,2),(3,3);
+insert into svekrva(introvertno) values (1),(0),(1);
+insert into mladic(hlace,stilfrizura,maraka) values ('Dugačke','Rep',3243.2323),('Kratke','Nulerica',32.32),('Taman','Irokeza',67.44);
+insert into sestra(suknja,dukserica,prviputa) values ('Plava','Crvena','2021-02-02'),('Roza','Ljubičasta','2021-05-12'),('Žuta','Siva','2020-05-25');
+insert into zena(bojaociju,maraka) values ('Plava',32.33),('Zelena',3445.44),('Smeđa',326.68);
+
+update sestra set bojaociju='Osijek';
+select * from sestra;
+
+delete from zena where maraka!=14.81;
+select * from zena;
+
+
+
