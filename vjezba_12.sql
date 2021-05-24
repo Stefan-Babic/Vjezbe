@@ -70,4 +70,22 @@ alter table svekrva add foreign key(zarucnica) references zarucnica(sifra);
 alter table djevojka add foreign key(svekrva) references svekrva(sifra);
 alter table prijatelj add foreign key(djevojka) references djevojka(sifra);
 
+insert into zarucnica(hlace,kratkamajica) values ('Svečane','Siva'),('ZaPokući','Crna'),('Poderane','Bijela');
+insert into sestra(kratkamajica) values ('Zelena'),('Žuta'),('Ljubičasta');
+insert into zarucnica_sestra(zarucnica,sestra) values (1,1),(2,2),(3,3);
+insert into svekrva(asocijalno) values (1),(0),(1);
+insert into djevojka(modelnaocala,vesta,kratkamajica,suknja,bojaociju,prstena,svekrva) values 
+('Ray Ban','Pamučna','Bijela','Kratka','Plava',32,1),('Police','Vunena','Crvena','Prekratka','Zelena',67,2),('Diesel','Poderana','Ljubičasta','Provokativna','Smeđa',65,3);
+insert into zena(eura) values (234.33),(356.322),(54656.44);
+insert into decko(stilfrizura,indiferentno,zena) values ('Mohawk',1,1),('Jež',0,2),('Šabanka',0,3);
+insert into prijatelj(asocijalno) values (1),(1),(0);
+
+update decko set asocijalno=0;
+select * from decko;
+
+delete from prijatelj where asocijalno=0;
+select * from prijatelj;
+
+
+
 
